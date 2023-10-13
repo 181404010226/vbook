@@ -1,4 +1,4 @@
-```javascript
+
 // subtitleDisplay.js
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -26,4 +26,4 @@ document.addEventListener('DOMContentLoaded', function() {
         displaySubtitles(e.detail.subtitles);
     });
 });
-```
+

@@ -3,6 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw; /* 添加这行 */
     margin: 0;
     background: #f3f3f3;
     font-family: 'Arial', sans-serif;
@@ -11,8 +12,8 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    height: 80%;
+    width: 100%; /* 修改这行 */
+    height: 100%; /* 修改这行 */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
@@ -49,4 +50,8 @@ body {
 
 input[type="file"] {
     margin-top: 20px;
+}
+
+.highlight {
+    color: blue;
 }
