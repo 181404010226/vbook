@@ -41,11 +41,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const previousSubtitle = getPreviousSubtitle(videoPlayer.currentTime);
             if (previousSubtitle) {
                 videoPlayer.currentTime = previousSubtitle.start;
+                console.log(`now time: ${videoPlayer.currentTime }`);
+                console.log(`subtitle time: ${previousSubtitle.start}`);
             }
         } else if (e.key === 's') {
             const nextSubtitle = getNextSubtitle(videoPlayer.currentTime);
             if (nextSubtitle) {
                 videoPlayer.currentTime = nextSubtitle.start;
+                console.log(`now time: ${videoPlayer.currentTime }`);
+                console.log(`subtitle time: ${nextSubtitle.start}`);
+   
             }
         } 
         console.log(`Current Highlighted Subtitle Index: ${currentHighlightedSubtitleIndex}`);
@@ -112,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function hmsToSeconds(hms) {
         let parts = hms.split(/[:|,]/);
-        return (+parts[0]) * 60 * 60 + (+parts[1]) * 60 + (+parts[2])+(+parts[2])/1000;
+        return (+parts[0]) * 60 * 60 + (+parts[1]) * 60 + (+parts[2])+(+parts[3])/1000;
     }
 
 });
