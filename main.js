@@ -37,14 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('keydown', function(e) {
         console.log(videoPlayer.currentTime);
-        if (e.key === 'w') {
+        if (['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'].includes(e.key)) {
             const previousSubtitle = getPreviousSubtitle(videoPlayer.currentTime);
             if (previousSubtitle) {
                 videoPlayer.currentTime = previousSubtitle.start;
                 console.log(`now time: ${videoPlayer.currentTime }`);
                 console.log(`subtitle time: ${previousSubtitle.start}`);
             }
-        } else if (e.key === 's') {
+        } else if (['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'].includes(e.key)) {
             const nextSubtitle = getNextSubtitle(videoPlayer.currentTime);
             if (nextSubtitle) {
                 videoPlayer.currentTime = nextSubtitle.start;
