@@ -40,6 +40,7 @@ body {
 }
 
 #subtitleDisplay {
+    font-size: 30px; 
     width: 100%;
     height: 80%;
     overflow-y: auto;
